@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 120px; /* lascia 60px di spazio sopra l'elemento target */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,13 +13,37 @@ body {
 header {
     text-align: center;
     margin-bottom: 2rem;
+    border-radius: 8px;
+    position: sticky;
+    /* attiva il comportamento sticky */
+    top: 0;
+    /* punto di “attacco” al bordo superiore */
+    background: #ffffff;
+    /* sfondo uniforme per leggibilità */
+    z-index: 1000;
+    /* sempre sopra il contenuto sottostante */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* leggera ombra per separazione */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    /* distribuisce equamente i link */
+    padding: 1rem;
+    /* spaziatura interna */
+}
+
+/* Optional: evidenzia link attivo */
+.nav a.active {
+    border-bottom: 2px solid #007acc;
 }
 
 h1 {
     margin-bottom: 0.2rem;
 }
 
-.github-link a{
+.github-link a {
     font-size: 0.9rem;
     color: #007acc;
     text-decoration: none;
@@ -53,4 +81,44 @@ footer {
     font-size: 0.9rem;
     color: #777;
     margin-top: 2rem;
+}
+
+#skills {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+    /* spazio tra le skill */
+}
+
+.skill span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.bar {
+    background: #e0e0e0;
+    /* base grigia per contrasto */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 0.75rem;
+    /* altezza barra */
+}
+
+.fill {
+    width: 0;
+    /* inizialmente vuota */
+    height: 100%;
+    transition: width 1.5s ease-in-out;
+    /* animazione fluida al caricamento */
+    background: #4caf50;
+    /* colore di riempimento */
+}
+
+#contact {
+    text-align: center;
+    margin: 2rem auto;
 }

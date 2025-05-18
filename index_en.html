@@ -74,6 +74,58 @@
     </div>
   </section>
 
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fill').forEach(el => {
+        const level = el.getAttribute('data-level');
+        el.style.width = level + '%';  /* riempie in base all’attributo */
+      });
+    });
+  </script>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skill">
+      <span>C++</span>
+      <div class="bar">
+        <div class="fill" data-level="90"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>SQL</span>
+      <div class="bar">
+        <div class="fill" data-level="85"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="bar">
+        <div class="fill" data-level="75"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>Java</span>
+      <div class="bar">
+        <div class="fill" data-level="70"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>Python</span>
+      <div class="bar">
+        <div class="fill" data-level="60"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <nav>
+      <a href="mailto:g.dipace.work@gmail.com">Email</a>
+      <a href="https://github.com/giovannidipacework" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/giovanni-dipace-0976a1366/" target="_blank">LinkedIn</a>
+      <a href="index_en.html">English</a>
+    </nav>
+  </section>
+
   <footer>
     &copy; 2025 Giovanni Dipace. All rights reserved.
   </footer>

@@ -13,14 +13,14 @@
     <h1>Giovanni Dipace</h1>
     <p>Studente di Ingegneria Informatica - Università di Pisa</p>
     <nav>
-      <a href="mailto:g.dipace.work@gmail.com">Email</a>
-      <a href="https://github.com/giovannidipacework" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/giovanni-dipace-0976a1366/" target="_blank">LinkedIn</a>
-      <a href="index_en.html">English</a>
+      <a href="#about">Chi Sono</a>
+      <a href="#projects">Progetti</a>
+      <a href="#skills">Competenze</a>
+      <a href="#contact">Contatti</a>
     </nav>
   </header>
 
-  <section>
+  <section id="about">
     <h2>Chi sono</h2>
     <p>
       Sono uno studente di Ingegneria Informatica con esperienza nello sviluppo software, scripting e gestione di
@@ -31,12 +31,13 @@
     </p>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Progetti</h2>
 
     <div class="project">
       <h3>Wolfenstein Web Game</h3>
-      <a href="https://github.com/giovannidipacework/Wolfenstein-Web-Game" target="_blank" rel="noopener noreferrer" class="github-link">
+      <a href="https://github.com/giovannidipacework/Wolfenstein-Web-Game" target="_blank" rel="noopener noreferrer"
+        class="github-link">
         <img src="https://img.shields.io/badge/GitHub-Repository-blue" alt="GitHub Repository" />
       </a>
       <p>Clone del primo gioco "pseudo-3D" ispirato a Wolfenstein. Sviluppato in HTML/CSS, JavaScript e PHP con backend
@@ -45,12 +46,14 @@
 
     <div class="project">
       <h3>Amazon Price Tracker (Bot Telegram)</h3>
-      <p>Bot sviluppato in Python per il monitoraggio dei prezzi su Amazon. Notifica via Telegram quando i prezzi scendono. Include scraping periodico.</p>
+      <p>Bot sviluppato in Python per il monitoraggio dei prezzi su Amazon. Notifica via Telegram quando i prezzi
+        scendono. Include scraping periodico.</p>
     </div>
 
     <div class="project">
       <h3>Amazon Price Tracker (JavaFX App)</h3>
-      <a href="https://github.com/giovannidipacework/Amazon-Price-Tracker" target="_blank" rel="noopener noreferrer" class="github-link">
+      <a href="https://github.com/giovannidipacework/Amazon-Price-Tracker" target="_blank" rel="noopener noreferrer"
+        class="github-link">
         <img src="https://img.shields.io/badge/GitHub-Repository-blue" alt="GitHub Repository" />
       </a>
       <p>Applicazione desktop in Java con interfaccia JavaFX per tracciare i prezzi dei prodotti Amazon. Salvataggio
@@ -59,7 +62,8 @@
 
     <div class="project">
       <h3>Quiz TCP Client/Server</h3>
-      <a href="https://github.com/giovannidipacework/Quiz-TCP-Client-Server" target="_blank" rel="noopener noreferrer" class="github-link">
+      <a href="https://github.com/giovannidipacework/Quiz-TCP-Client-Server" target="_blank" rel="noopener noreferrer"
+        class="github-link">
         <img src="https://img.shields.io/badge/GitHub-Repository-blue" alt="GitHub Repository" />
       </a>
       <p>Applicazione in C con socket TCP. Il server multithreaded gestisce più client per un quiz interattivo a
@@ -68,12 +72,65 @@
 
     <div class="project">
       <h3>Smart Mobility Database</h3>
-      <a href="https://github.com/giovannidipacework/Smart-Mobility-Database" target="_blank" rel="noopener noreferrer" class="github-link">
+      <a href="https://github.com/giovannidipacework/Smart-Mobility-Database" target="_blank" rel="noopener noreferrer"
+        class="github-link">
         <img src="https://img.shields.io/badge/GitHub-Repository-blue" alt="GitHub Repository" />
       </a>
       <p>Progetto SQL per la gestione di car sharing, pooling e ride sharing. Include utenti, veicoli, prenotazioni,
         tragitti e calcolo dei costi su schema E/R normalizzato.</p>
     </div>
+  </section>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fill').forEach(el => {
+        const level = el.getAttribute('data-level');
+        el.style.width = level + '%';  /* riempie in base all’attributo */
+      });
+    });
+  </script>
+
+  <section id="skills">
+    <h2>Competenze Tecniche</h2>
+    <div class="skill">
+      <span>C++</span>
+      <div class="bar">
+        <div class="fill" data-level="90"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>SQL</span>
+      <div class="bar">
+        <div class="fill" data-level="85"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="bar">
+        <div class="fill" data-level="75"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>Java</span>
+      <div class="bar">
+        <div class="fill" data-level="70"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <span>Python</span>
+      <div class="bar">
+        <div class="fill" data-level="60"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <nav>
+      <a href="mailto:g.dipace.work@gmail.com">Email</a>
+      <a href="https://github.com/giovannidipacework" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/giovanni-dipace-0976a1366/" target="_blank">LinkedIn</a>
+      <a href="index_en.html">English</a>
+    </nav>
   </section>
 
   <footer>
