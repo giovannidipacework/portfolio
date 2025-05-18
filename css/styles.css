@@ -15,6 +15,12 @@ h1 {
     margin-bottom: 0.2rem;
 }
 
+.github-link a{
+    font-size: 0.9rem;
+    color: #007acc;
+    text-decoration: none;
+}
+
 nav a {
     margin: 0 1rem;
     text-decoration: none;
@@ -39,6 +45,7 @@ h2 {
 
 .project h3 {
     margin: 0.5rem 0 0.2rem;
+    color: #000000;
 }
 
 footer {
