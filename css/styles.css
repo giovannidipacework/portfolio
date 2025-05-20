@@ -19,8 +19,8 @@ body {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-body.scrolled .navbar {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+body.scrolled .navbar,body.scrolled .nav-links{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -82,9 +82,8 @@ footer {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     margin: 0;
-    padding: 0;
 }
 
 .nav-links li a {
@@ -128,27 +127,35 @@ footer {
     }
 
     .nav-links {
-        display: none;
         flex-direction: column;
+        align-items: flex-end;
         background-color: #003049;
         position: absolute;
         top: 60px;
         right: 0;
         width: 100%;
-        text-align: right;
-        padding: 1rem 2rem;
+        padding: 0;
+        /* nessun padding da chiuso */
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.1s ease, opacity 0.1s ease, padding 0.1s ease;
     }
 
-    .nav-links.open {
-        display: flex;
+    .nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+        padding: 1rem 2rem;
+        pointer-events: auto;
     }
 }
 
 /* Scale progetto on hover */
 .progetto:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: all 0.05s ease-in-out;
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.05s ease-in-out;
 }
 
 /* Bottone tema */
@@ -162,13 +169,13 @@ footer {
 
 /* Progress bar */
 #progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  background: #0077b6;
-  width: 0%;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #0077b6;
+    width: 0%;
+    z-index: 9999;
 }
 
 /* Tema scuro */
@@ -202,3 +209,6 @@ body.dark-mode .lang-switch select {
     color: #f1f1f1;
 }
 
+body, header, footer, .navbar, .progetto {
+  transition: all 0.3s ease;
+}
