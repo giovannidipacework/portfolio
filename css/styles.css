@@ -147,7 +147,8 @@ body.dark-mode {
 body.dark-mode header,
 body.dark-mode footer,
 body.dark-mode .navbar,
-body.dark-mode .progetto {
+body.dark-mode .progetto,
+body.dark-mode .nav-links {
   background-color: #1e1e1e;
   color: #f1f1f1;
 }
