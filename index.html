@@ -24,6 +24,7 @@
       <li><a href="#competenze">Competenze</a></li>
       <li><a href="#contatti">Contatti</a></li>
       <li><a href="index_en.html" title="English">🌐 EN</a></li>
+      <li><button id="toggle-theme" aria-label="Toggle dark mode">🌙</button></li>
     </ul>
   </nav>
 
@@ -32,7 +33,7 @@
     <h1>Giovanni Dipace</h1>
     <p>Studente di Ingegneria Informatica all'Università di Pisa</p>
     <p>Mi occupo di sviluppo software, automazione e tecnologie web. Sono appassionato di intelligenza artificiale,
-      sicurezza informatica e game development.
+      sicurezza informatica e game development.<br>
       Cerco esperienze pratiche per migliorare le mie competenze e contribuire attivamente a progetti reali.</p>
   </header>
 
@@ -116,6 +117,24 @@
       nav.classList.toggle("open");
     }
   </script>
+
+  <!-- Dark mode toggle script -->
+  <script>
+    // imposta dark mode automatica al primo caricamento
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark-mode');
+      document.getElementById('toggle-theme').textContent = '☀️';
+    }
+
+    // toggle manuale
+    const themeButton = document.getElementById('toggle-theme');
+    themeButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      themeButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+
+
 </body>
 
 </html>

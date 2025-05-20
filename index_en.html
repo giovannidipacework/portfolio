@@ -24,6 +24,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="index.html" title="Italiano">🌐 IT</a></li>
+      <li><button id="toggle-theme" aria-label="Toggle dark mode">🌙</button></li>
     </ul>
   </nav>
 
@@ -112,6 +113,22 @@
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('active');
     }
+  </script>
+  
+  <!-- Dark mode toggle script -->
+  <script>
+    // imposta dark mode automatica al primo caricamento
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark-mode');
+      document.getElementById('toggle-theme').textContent = '☀️';
+    }
+
+    // toggle manuale
+    const themeButton = document.getElementById('toggle-theme');
+    themeButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      themeButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
   </script>
 
 </body>

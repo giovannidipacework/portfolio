@@ -137,3 +137,42 @@ footer {
         padding: 1rem;
     }
 }
+
+/* Tema scuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .navbar,
+body.dark-mode .progetto {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode h2,
+body.dark-mode a,
+body.dark-mode .progetto a,
+body.dark-mode .nav-links li a {
+  color: #90caf9;
+}
+
+body.dark-mode .nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .lang-switch select {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* Bottone tema */
+#toggle-theme {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
