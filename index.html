@@ -95,7 +95,6 @@
     </ul>
   </section>
 
-
   <!-- Contact -->
   <section id="contatti">
     <h2>Contattami</h2>
@@ -109,30 +108,7 @@
     <p>&copy; 2025 Giovanni Dipace</p>
   </footer>
 
-  <!-- Menu script -->
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("open");
-    }
-  </script>
-
-  <!-- Dark mode toggle script -->
-  <script>
-    // imposta dark mode automatica al primo caricamento
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.body.classList.add('dark-mode');
-      document.getElementById('toggle-theme').textContent = '☀️';
-    }
-
-    // toggle manuale
-    const themeButton = document.getElementById('toggle-theme');
-    themeButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      themeButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-  </script>
-
+  <script src="js/script.js" defer></script>
 
 </body>
 
