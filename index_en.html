@@ -4,132 +4,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark">
-  <title>Giovanni Dipace - Portfolio</title>
+  <title>Giovanni Dipace | Portfolio</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Giovanni Dipace</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html" title="Italiano">🌐 IT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
   <header>
     <h1>Giovanni Dipace</h1>
-    <p>Computer Engineering Student - University of Pisa</p>
-    <nav>
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <a href="index.html">Italiano</a>
-    </nav>
+    <p>Computer Engineering Student at the University of Pisa</p>
+    <p>Passionate about software development, automation, artificial intelligence and cybersecurity.<br>
+      I'm currently looking for remote opportunities to apply my skills to real-world projects.</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Engineering student with experience in software development, scripting, and database management.
-      I'm passionate about artificial intelligence, cryptography, and game development. I'm seeking opportunities to
-      apply my technical skills in real-world projects.
-    </p>
-  </section>
-
+  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
 
-    <div class="project">
-      <h3>Wolfenstein Web Game</h3>
-      <a href="https://github.com/giovannidipacework/Wolfenstein-Web-Game" target="_blank" rel="noopener noreferrer" class="github-link">
-        <img src="https://img.shields.io/badge/GitHub-Repository-blue" alt="GitHub Repository" />
-      </a>
-      <p>A clone of the original 'pseudo-3D' Wolfenstein game. Developed using HTML/CSS, JavaScript, and PHP with an SQL
-        backend, it includes a level editor, login system, and score saving.</p>
+    <div class="progetto">
+      <h3>Amazon Price Tracker (Telegram Bot)</h3>
+      <p><strong>Technologies:</strong> Python, Telegram API, Web Scraping, SQLite</p>
+      <p>A bot that monitors Amazon product prices and sends Telegram alerts when prices change. It scrapes product
+        pages periodically and stores price history in a database.</p>
+      <a href="https://github.com/giovannidipacework/Amazon-Price-Tracker" target="_blank">View on GitHub</a>
     </div>
 
-    <div class="project">
-      <h3>Amazon Price Tracker (Bot Telegram)</h3>
-      <p>A Python bot to track Amazon product prices. Sends Telegram alerts when prices drop. Include scraping periodic.</p>
-    </div>
-
-    <div class="project">
+    <div class="progetto">
       <h3>Amazon Price Tracker (JavaFX App)</h3>
-      <a href="https://github.com/giovannidipacework/Amazon-Price-Tracker" target="_blank" rel="noopener noreferrer" class="github-link">
-        <img src="https://img.shields.io/badge/GitHub-Repository-blue" alt="GitHub Repository" />
-      </a>
-      <p>Java desktop application with JavaFX interface to monitor Amazon product prices. Data saving in SQL, historical
-        graph, XML configuration and remote logging.</p>
+      <p><strong>Technologies:</strong> Java, JavaFX, MySQL, XML</p>
+      <p>A desktop application with a JavaFX UI that tracks Amazon product prices over time. Includes search, historical
+        charting, data persistence with SQL, and remote logging.</p>
+      <a href="https://github.com/giovannidipacework/Amazon-Price-Tracker-JavaFX" target="_blank">View on GitHub</a>
     </div>
 
-    <div class="project">
+    <div class="progetto">
+      <h3>Wolfenstein Web Game</h3>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+      <p>A “pseudo-3D” web game inspired by Wolfenstein. Developed for a university course, featuring level editor,
+        enemy interaction, login system and score tracking in a SQL database.</p>
+      <a href="https://github.com/giovannidipacework/Wolfenstein-Web-Game" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="progetto">
       <h3>Quiz TCP Client/Server</h3>
-      <a href="https://github.com/giovannidipacework/Quiz-TCP-Client-Server" target="_blank" rel="noopener noreferrer" class="github-link">
-        <img src="https://img.shields.io/badge/GitHub-Repository-blue" alt="GitHub Repository" />
-      </a>
-      <p>C application using TCP sockets. The multithreaded server handles multiple clients for an interactive
-        multiple-choice quiz. Communication via text and binary signals.</p>
+      <p><strong>Technologies:</strong> C, TCP sockets, multithreading</p>
+      <p>A client-server quiz app using TCP sockets. The multithreaded server handles multiple clients and loads
+        questions from file. Communication is done using structured text and signals.</p>
+      <a href="https://github.com/giovannidipacework/Quiz-TCP-Client-Server" target="_blank">View on GitHub</a>
     </div>
 
-    <div class="project">
+    <div class="progetto">
       <h3>Smart Mobility Database</h3>
-      <a href="https://github.com/giovannidipacework/Smart-Mobility-Database" target="_blank" rel="noopener noreferrer" class="github-link">
-        <img src="https://img.shields.io/badge/GitHub-Repository-blue" alt="GitHub Repository" />
-      </a>
-      <p>SQL project for managing car sharing, pooling, and ride sharing. Includes users, vehicles, bookings, routes,
-        and cost calculation based on a normalized E/R schema.</p>
+      <p><strong>Technologies:</strong> SQL, Entity-Relationship modeling</p>
+      <p>Relational database design for shared mobility services (car sharing, ride sharing, pooling). Includes users,
+        vehicles, reservations, routes, and pricing. Designed using a normalized E/R schema.</p>
+      <a href="https://github.com/giovannidipacework/Smart-Mobility-Database" target="_blank">View on GitHub</a>
     </div>
+
   </section>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.fill').forEach(el => {
-        const level = el.getAttribute('data-level');
-        el.style.width = level + '%';  /* riempie in base all’attributo */
-      });
-    });
-  </script>
-
+  <!-- Skills -->
   <section id="skills">
     <h2>Technical Skills</h2>
-    <div class="skill">
-      <span>C++</span>
-      <div class="bar">
-        <div class="fill" data-level="90"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <span>SQL</span>
-      <div class="bar">
-        <div class="fill" data-level="85"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <span>JavaScript</span>
-      <div class="bar">
-        <div class="fill" data-level="75"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <span>Java</span>
-      <div class="bar">
-        <div class="fill" data-level="70"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <span>Python</span>
-      <div class="bar">
-        <div class="fill" data-level="60"></div>
-      </div>
-    </div>
+    <ul>
+      <li><strong>Languages:</strong> C, C++, Java, Python, JavaScript, HTML/CSS, SQL, C#, Assembler</li>
+      <li><strong>Databases:</strong> MySQL, SQLite</li>
+      <li><strong>Tools & Frameworks:</strong> JavaFX, Git, PHP, Visual Studio Code</li>
+      <li><strong>Other:</strong> Web scraping, socket TCP/IP, Telegram Bot development, PC assembly, basic tech support
+      </li>
+      <li><strong>Operating Systems:</strong> Windows, Linux (Ubuntu)</li>
+    </ul>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
-    <nav>
-      <a href="mailto:g.dipace.work@gmail.com">Email</a>
-      <a href="https://github.com/giovannidipacework" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/giovanni-dipace-0976a1366/" target="_blank">LinkedIn</a>
-    </nav>
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:g.dipace.work@gmail.com">g.dipace.work@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/giovannidipacework" target="_blank">giovannidipacework</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/giovanni-dipace-0976a1366" target="_blank">giovanni-dipace</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Giovanni Dipace. All rights reserved.
+    <p>&copy; 2025 Giovanni Dipace</p>
   </footer>
+
+  <!-- Menu script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
+
 </body>
 
 </html>
